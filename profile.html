@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Puskuri Sudeepa | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f9fc;
+            color: #222;
+        }
+
+        /* Navigation */
+        header {
+            background: #111827;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero */
+        .hero {
+            max-width: 1150px;
+            min-height: 90vh;
+            margin: auto;
+            padding: 70px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .hello {
+            color: #0284c7;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin: 15px 0;
+            color: #111827;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 span {
+            color: #0284c7;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            margin-right: 10px;
+            background: #0284c7;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #0369a1;
+        }
+
+        .dark-btn {
+            background: #111827;
+        }
+
+        /* Profile */
+        .profile {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 8px solid #0284c7;
+            background: #e0f2fe;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 100px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Sections */
+        section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 80px 30px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 45px;
+            color: #111827;
+        }
+
+        /* About */
+        .about {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+            color: #0284c7;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        /* Education */
+        .education {
+            background: #eef6ff;
+            max-width: 100%;
+        }
+
+        .education-box {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .education-box h3 {
+            color: #0284c7;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        /* Skills */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .skill .icon {
+            font-size: 45px;
+        }
+
+        .skill h3 {
+            margin: 12px 0;
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-icon {
+            font-size: 50px;
+        }
+
+        .project h3 {
+            margin: 15px 0;
+            color: #0284c7;
+        }
+
+        .project p {
+            line-height: 1.6;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 6px 12px;
+            background: #e0f2fe;
+            color: #0369a1;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #eef6ff;
+            max-width: 100%;
+        }
+
+        .contact-box {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-box p {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+        @media(max-width: 800px) {
+
+            nav ul {
+                gap: 12px;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .profile {
+                width: 220px;
+                height: 220px;
+                font-size: 75px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .skills {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 500px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Puskuri Sudeepa</div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Home -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <div class="hello">
+                HELLO, I'M
+            </div>
+
+            <h1>Puskuri Sudeepa</h1>
+
+            <h2>
+                B.Tech CSE Student &
+                <span>Web Developer</span>
+            </h2>
+
+            <p>
+                Welcome to my portfolio. I am a passionate student
+                interested in programming, web development,
+                artificial intelligence and modern technologies.
+            </p>
+
+            <a href="#projects" class="btn">
+                View My Projects
+            </a>
+
+            <a href="#contact" class="btn dark-btn">
+                Contact Me
+            </a>
+
+        </div>
+
+
+        <div class="profile">
+            👩‍💻
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2 class="title">About Me</h2>
+
+        <div class="about">
+
+            <div class="card">
+
+                <h3>Who I Am</h3>
+
+                <p>
+                    Hello! I am <b>Puskuri Sudeepa</b>, a B.Tech
+                    Computer Science and Engineering student.
+                </p>
+
+                <p>
+                    I am interested in programming, web development,
+                    artificial intelligence and software development.
+                </p>
+
+                <p>
+                    I enjoy learning new technologies and creating
+                    practical projects that solve real-world problems.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Personal Details</h3>
+
+                <p><b>Name:</b> Puskuri Sudeepa</p>
+
+                <p><b>Qualification:</b> B.Tech CSE</p>
+
+                <p><b>University:</b> Sandip University</p>
+
+                <p><b>Role:</b> Student & Web Developer</p>
+
+                <p><b>Country:</b> India</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education" class="education">
+
+        <h2 class="title">Education</h2>
+
+        <div class="education-box">
+
+            <h3>B.Tech - Computer Science and Engineering</h3>
+
+            <p>
+                <b>University:</b> Sandip University
+            </p>
+
+            <p>
+                I am currently pursuing my B.Tech in Computer
+                Science and Engineering and developing my skills
+                in programming and technology.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="title">My Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                <div class="icon">🐍</div>
+                <h3>Python</h3>
+                <p>Programming</p>
+            </div>
+
+            <div class="skill">
+                <div class="icon">🌐</div>
+                <h3>HTML</h3>
+                <p>Web Development</p>
+            </div>
+
+            <div class="skill">
+                <div class="icon">🎨</div>
+                <h3>CSS</h3>
+                <p>Web Design</p>
+            </div>
+
+            <div class="skill">
+                <div class="icon">⚡</div>
+                <h3>JavaScript</h3>
+                <p>Web Development</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2 class="title">My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+
+                <div class="project-icon">🔐</div>
+
+                <h3>Password Generator</h3>
+
+                <p>
+                    A Python project that generates strong,
+                    random passwords for better security.
+                </p>
+
+                <span class="tag">Python</span>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-icon">🌳</div>
+
+                <h3>Binary Search Tree Student Manager</h3>
+
+                <p>
+                    A student management project using a
+                    Binary Search Tree to store and search
+                    student information.
+                </p>
+
+                <span class="tag">HTML • CSS • JavaScript</span>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-icon">🌡️</div>
+
+                <h3>Digital Temperature Monitor</h3>
+
+                <p>
+                    A digital temperature monitoring project
+                    designed to display and monitor temperature
+                    information.
+                </p>
+
+                <span class="tag">Technology Project</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2 class="title">Contact Me</h2>
+
+        <div class="contact-box">
+
+            <p>
+                👩‍💻 <b>Name:</b> Puskuri Sudeepa
+            </p>
+
+            <p>
+                🎓 <b>Qualification:</b> B.Tech CSE
+            </p>
+
+            <p>
+                🏫 <b>University:</b> Sandip University
+            </p>
+
+            <p>
+                📧 <b>Email:</b> Add your email here
+            </p>
+
+            <p>
+                📱 <b>Phone:</b> Add your phone number here
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Puskuri Sudeepa | My Portfolio
+        </p>
+
+        <p>
+            B.Tech CSE Student | Sandip University
+        </p>
+
+    </footer>
+
+</body>
+</html>
