@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title><link rel="stylesheet" href="style.css">
+
+</head><body><!-- Navigation -->
+<header>
+    <nav class="navbar">
+        <h2 class="logo">MyPortfolio</h2>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+</header>
+
+<!-- Home -->
+<section id="home" class="hero">
+    <div class="hero-text">
+        <p class="hello">HELLO, I'M</p>
+
+        <h1></h1>puskuri sudeepa</h1>
+
+        <h2>Student & <span>Web Developer</span></h2>
+
+        <p>
+            Welcome to my portfolio. I am a student interested in
+            programming, web development and technology.
+        </p>
+
+        <a href="#projects" class="btn">View My Projects</a>
+        <a href="#contact" class="btn secondary">Contact Me</a>
+    </div>
+
+    <div class="hero-image">
+        <div class="profile-circle">
+            <span>👩‍💻</span>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-container">
+        <div class="about-card">
+            <h3>Who I Am</h3>
+
+            <p>
+                I am a passionate student who enjoys learning new
+                technologies and creating useful projects.
+                I am currently improving my programming and
+                web development skills.
+            </p>
+
+            <p>
+                My goal is to become a skilled software developer
+                and build creative and useful applications.
+            </p>
+        </div>
+
+        <div class="about-info">
+            <p><strong>puskuri sudeepa:</strong> Your Name</p>
+            <p><strong>CSE-AIML:</strong> Your Course</p>
+            <p><strong>sandip university:</strong> Your College</p>
+            <p><strong>Maharastra:</strong> India</p>
+            <p><strong>puskurisudeepa13@gmail.com:</strong> yourmail@example.com</p>
+        </div>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section skills-section">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <div class="skill-icon">🐍</div>
+            <h3>Python</h3>
+            <div class="progress">
+                <div class="progress-bar python"></div>
+            </div>
+            <p>80%</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🌐</div>
+            <h3>HTML</h3>
+            <div class="progress">
+                <div class="progress-bar html"></div>
+            </div>
+            <p>90%</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <h3>CSS</h3>
+            <div class="progress">
+                <div class="progress-bar css"></div>
+            </div>
+            <p>85%</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">⚡</div>
+            <h3>JavaScript</h3>
+            <div class="progress">
+                <div class="progress-bar javascript"></div>
+            </div>
+            <p>70%</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <div class="project-icon">🔐</div>
+            <h3>Password Generator</h3>
+
+            <p>
+                A Python-based project that generates strong
+                and random passwords.
+            </p>
+
+            <span>Python</span>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon">🌳</div>
+            <h3>Student BST Manager</h3>
+
+            <p>
+                A Binary Search Tree based student management
+                project for storing and searching student data.
+            </p>
+
+            <span>HTML • CSS • JavaScript</span>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon">🌡️</div>
+            <h3>Digital Temperature Monitor</h3>
+
+            <p>
+                A project designed to monitor and display
+                temperature information.
+            </p>
+
+            <span>Technology Project</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section contact-section">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h3>Let's Connect</h3>
+
+            <p>
+                If you would like to contact me, send me a message
+                using the form.
+            </p>
+
+            <p>📧 yourmail@example.com</p>
+            <p>📱 +91 XXXXX XXXXX</p>
+            <p>📍 India</p>
+        </div>
+
+        <form id="contactForm">
+
+            <input type="text" id="name"
+                placeholder="Your Name" required>
+
+            <input type="email" id="email"
+                placeholder="Your Email" required>
+
+            <textarea id="message"
+                placeholder="Your Message"
+                rows="5" required></textarea>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Your Name. All Rights Reserved.</p>
+    <p>Made with ❤️ using HTML, CSS & JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
